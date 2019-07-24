@@ -1,0 +1,46 @@
+.three-col-layout {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 100vh;
+}
+
+header,
+footer {
+  padding: 20px;
+  background-color: rgb(137, 157, 193);
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+.col-1 {
+  background-color: beige;
+  flex-grow: 1;
+}
+
+.col-2 {
+  background-color: rgb(178, 108, 114);
+  width: 15em;
+  order: -1;
+}
+
+.col-3 {
+  background-color: rgba(183, 150, 99, 0.62);
+  width: 15em;
+}
+
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+  }
+
+  .col-2,
+  .col-3 {
+    width: auto;
+    height: 2em;
+  }
+}
